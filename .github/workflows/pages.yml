@@ -48,7 +48,9 @@ jobs:
           
           mkdir -p _site
           
-          cp -a index.html library.html robots.txt sitemap.xml sw.js .nojekyll assets guide _site/
+          cp -a index.html library.html robots.txt sitemap.xml sw.js .nojekyll assets _site/
+          
+          unzip -q guide-pages.zip -d _site
           
           unzip -q questions-library.zip -d _site
           
@@ -70,6 +72,7 @@ jobs:
         
         uses: actions/deploy-pages@v4
         
+
 
 
 
